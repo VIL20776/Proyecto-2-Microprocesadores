@@ -37,9 +37,9 @@ int main () {
     long resultado;
     long total;
 
-    pthread_t tid [8];
+    pthread_t tid [threads];
 
-    for (int j = 0; j < 8; j++){
+    for (int j = 0; j < threads; j++){
         rc = pthread_create(&tid[j],NULL,CalcPi,(void*)j);
         if(rc)
         {
